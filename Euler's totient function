@@ -21,8 +21,7 @@ int32_t main()
         {
             for(int j=2*i;j<N;j+=i)
             {
-                totient[j]*=i-1;
-                totient[j]/=i;
+                 totient[j]-=totient[j]/i;
             }
             totient[i]=i-1;
         }
